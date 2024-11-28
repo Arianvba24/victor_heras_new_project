@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import urllib.request
 
 def load_data():
-    df = pd.read_excel(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\dataframe.xlsx")
+    df = pd.read_excel(r"dataframe.xlsx")
     df["URL publicación"] = df["URL publicación"].apply(lambda x: f"https://www.instagram.com/{x}")
     df.drop(columns="Marca temporal",inplace=True)
     df["Fecha"] = pd.to_datetime(df["Fecha"],format="%d/%m/%Y")
@@ -63,7 +63,7 @@ def main():
         traer_datos()
 
     st.dataframe(df)
-    df.to_csv(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\instagram\valor_definitivo_instagram.csv")
+    df.to_csv(r"instagram\valor_definitivo_instagram.csv")
 
     tab1,tab2,tab3 = st.tabs(["Visualizaciones","Likes","Comentarios"])
 
