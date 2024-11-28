@@ -33,7 +33,7 @@ except locale.Error:
 
 @st.dialog("Elija su respuesta")
 def actualizar_youtube():
-    # listado = os.listdir(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app")
+    # listado = os.listdir(r"")
     fecha_data = os.path.getmtime(r"data_youtube.json")
     final_fecha = datetime.fromtimestamp(fecha_data)
     st.write("La última modificación del archivo de youtube fue el:")
