@@ -63,7 +63,7 @@ def main():
         traer_datos()
 
     st.dataframe(df)
-    df.to_csv(r"instagram\valor_definitivo_instagram.csv")
+    df.to_csv(r"instagram/valor_definitivo_instagram.csv")
 
     tab1,tab2,tab3 = st.tabs(["Visualizaciones","Likes","Comentarios"])
 
