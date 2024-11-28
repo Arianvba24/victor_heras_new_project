@@ -53,7 +53,7 @@ def extraer_data_ump():
                     print("Error al obtener los datos:", response.status_code, response.text)
                     break
                     
-            with open(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\valores_airtable_transacciones.json","w") as j:
+            with open(r"valores_airtable_transacciones.json","w") as j:
                 json.dump(all_records,j)
             st.rerun()
 
@@ -63,9 +63,9 @@ def extraer_data_ump():
 
 
 def load_data():
-    with open(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\valores_airtable_transacciones.json","r") as j:
+    with open(r"valores_airtable_transacciones.json","r") as j:
         all_records = json.load(j)
-    dp = pd.read_excel(r"C:\Users\Cash\Downloads\\Transacciones-Tabla pruebas 1_2311.xlsx",sheet_name="Hoja1")
+    dp = pd.read_excel(r"Transacciones-Tabla pruebas 1_2311.xlsx",sheet_name="Hoja1")
 
     xp1 = list(dp["-"].values)
 
