@@ -25,7 +25,7 @@ def traer_datos():
         if st.button("Si"):
             spreadsheet_id = '1--h3tAcj3lvRQ7z7Kfj3NljGf93YT2fUac-lVy9MJeA'
             url = f'https://docs.google.com/spreadsheets/d/{spreadsheet_id}/export?format=xlsx'
-            output_file = r'C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\dataframe.xlsx'
+            output_file = r'dataframe.xlsx'
             urllib.request.urlretrieve(url, output_file)
             st.rerun()
 
