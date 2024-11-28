@@ -9,7 +9,11 @@ from datetime import datetime
 import os
 import requests
 
-locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')  
+try:
+    locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
+except locale.Error:
+    print("Locale 'es_ES.UTF-8' no está disponible. Usando el predeterminado.")
+    locale.setlocale(locale.LC_ALL, '')
 
 # st.set_page_config(layout="wide")
 
