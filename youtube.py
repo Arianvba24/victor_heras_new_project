@@ -154,7 +154,7 @@ def formatear_por_miles(valor):
 
 def main():
 
-    with open(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\data_youtube.json") as j:
+    with open(r"data_youtube.json") as j:
         value_json = json.load(j)
 
 
