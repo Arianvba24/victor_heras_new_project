@@ -153,6 +153,7 @@ def formatear_por_miles(valor):
     return f"{locale.format_string('%.0f', valor, grouping=True)}"
 
 def main():
+    print("Hola mundo")
 
     with open(r"data_youtube.json") as j:
         value_json = json.load(j)
