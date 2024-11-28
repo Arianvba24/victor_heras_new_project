@@ -11,10 +11,10 @@ def load_data():
     spreadsheet_id = '1bkyXjgjjcjv0LqS6FudGp_tzZ5S3Bvzkuz2N91ZVFI4'
     sheet_id = '356104726'
     url = f'https://docs.google.com/spreadsheets/d/{spreadsheet_id}/export?format=xlsx'
-    output_file = r'C:\Users\Cash\Proyectos\092024\Victor heras project\Airtable bot\hoja_de_calculo.xlsx'
+    output_file = r'hoja_de_calculo.xlsx'
     urllib.request.urlretrieve(url, output_file)
 
-    archivo_excel = r"C:\Users\Cash\Proyectos\092024\Victor heras project\Airtable bot\hoja_de_calculo.xlsx"
+    archivo_excel = r"hoja_de_calculo.xlsx"
     excel = pd.ExcelFile(archivo_excel)
     listado_hojas = excel.sheet_names
     dataframes = []
