@@ -352,7 +352,7 @@ def main():
     with cola1:
 
         st.dataframe(df,use_container_width=True)
-        df.to_csv(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\youtube\valor_definitivo_youtube.csv")
+        df.to_csv(r"youtube/valor_definitivo_youtube.csv")
         
 
 
