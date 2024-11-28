@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import io
 
-df = pd.read_csv(r"instagram\valor_definitivo_instagram.csv",index_col=0)
-dx = pd.read_csv(r"youtube\valor_definitivo_youtube.csv",index_col=0)
+df = pd.read_csv(r"instagram/valor_definitivo_instagram.csv",index_col=0)
+dx = pd.read_csv(r"youtube/valor_definitivo_youtube.csv",index_col=0)
 
 instagram_id = df["URL publicación"].values
 instagram_values = df["URL publicación"].values
@@ -58,7 +58,7 @@ def main():
 
 
     with tab2:
-        df = pd.read_excel(r"analisis\archivo_analisis_nexo.xlsx")
+        df = pd.read_excel(r"analisis/archivo_analisis_nexo.xlsx")
         buffer1 = io.BytesIO()
         with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
             df.to_excel(writer, index=False, sheet_name='Datos')
