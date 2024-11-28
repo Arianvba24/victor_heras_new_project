@@ -138,7 +138,7 @@ def actualizar_youtube():
                 print(comment_count)
                 
 
-            with open(r"C:\Users\Cash\Proyectos\092024\Victor heras project\streamlit app\data_youtube.json","w") as j:
+            with open(r"data_youtube.json","w") as j:
                 json.dump(data_youtube,j)
 
             st.rerun()
